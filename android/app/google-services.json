@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "721177423674",
+    "project_id": "virtualtherapy-bb466",
+    "storage_bucket": "virtualtherapy-bb466.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721177423674:android:f629d354c6c4f913f12a03",
+        "android_client_info": {
+          "package_name": "com.virtualtherapy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721177423674-i4krfe25dc0qfpul4je8t43m59evlcra.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.virtualtherapy",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "721177423674-e2a8jhtnbkstmdp6b42ca4890pnt7174.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi0vkIB6HHGoJF94PyEp6DWO9ABSUS6Q4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721177423674-e2a8jhtnbkstmdp6b42ca4890pnt7174.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
