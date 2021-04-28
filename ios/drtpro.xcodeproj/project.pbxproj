@@ -12,6 +12,13 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8B702C85D7FE4A9BB16E7E1C /* TTNorms-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ADDBEBA1F52E409C8A91A0DA /* TTNorms-Black.otf */; };
+		1A0729F3B648449E9DB3BC5E /* TTNorms-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 385EC433B84C44B8A300864E /* TTNorms-BlackItalic.otf */; };
+		91A2930521C54CB298341A0D /* TTNorms-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 180CCDB48C1D4299A8DF7C7A /* TTNorms-Bold.otf */; };
+		EFD7A353507A4FD0943414DB /* TTNorms-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 76BDBC2D5100440B9CE0C3CF /* TTNorms-BoldItalic.otf */; };
+		DC5700F568B64AAAACF8731F /* TTNorms-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44F7B0018C7748A69AF362E7 /* TTNorms-Italic.otf */; };
+		2A19DCAED9DB44D6A4459E66 /* TTNorms-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14811B38DF3E424EBF48378A /* TTNorms-Light.otf */; };
+		5CE90D61309E4F67BA371313 /* TTNorms-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB7571DB1CD945E8B9ABB80F /* TTNorms-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = drtpro/main.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = drtpro/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ADDBEBA1F52E409C8A91A0DA /* TTNorms-Black.otf */ = {isa = PBXFileReference; name = "TTNorms-Black.otf"; path = "../app/assets/fonts/TTNorms-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		385EC433B84C44B8A300864E /* TTNorms-BlackItalic.otf */ = {isa = PBXFileReference; name = "TTNorms-BlackItalic.otf"; path = "../app/assets/fonts/TTNorms-BlackItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		180CCDB48C1D4299A8DF7C7A /* TTNorms-Bold.otf */ = {isa = PBXFileReference; name = "TTNorms-Bold.otf"; path = "../app/assets/fonts/TTNorms-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		76BDBC2D5100440B9CE0C3CF /* TTNorms-BoldItalic.otf */ = {isa = PBXFileReference; name = "TTNorms-BoldItalic.otf"; path = "../app/assets/fonts/TTNorms-BoldItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		44F7B0018C7748A69AF362E7 /* TTNorms-Italic.otf */ = {isa = PBXFileReference; name = "TTNorms-Italic.otf"; path = "../app/assets/fonts/TTNorms-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		14811B38DF3E424EBF48378A /* TTNorms-Light.otf */ = {isa = PBXFileReference; name = "TTNorms-Light.otf"; path = "../app/assets/fonts/TTNorms-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB7571DB1CD945E8B9ABB80F /* TTNorms-Regular.otf */ = {isa = PBXFileReference; name = "TTNorms-Regular.otf"; path = "../app/assets/fonts/TTNorms-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +123,7 @@
 				00E356EF1AD99517003FC87E /* drtproTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				F88BA6C710A54A2183E6FAEF /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -123,6 +138,21 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		F88BA6C710A54A2183E6FAEF /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				ADDBEBA1F52E409C8A91A0DA /* TTNorms-Black.otf */,
+				385EC433B84C44B8A300864E /* TTNorms-BlackItalic.otf */,
+				180CCDB48C1D4299A8DF7C7A /* TTNorms-Bold.otf */,
+				76BDBC2D5100440B9CE0C3CF /* TTNorms-BoldItalic.otf */,
+				44F7B0018C7748A69AF362E7 /* TTNorms-Italic.otf */,
+				14811B38DF3E424EBF48378A /* TTNorms-Light.otf */,
+				BB7571DB1CD945E8B9ABB80F /* TTNorms-Regular.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -214,6 +244,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				8B702C85D7FE4A9BB16E7E1C /* TTNorms-Black.otf in Resources */,
+				1A0729F3B648449E9DB3BC5E /* TTNorms-BlackItalic.otf in Resources */,
+				91A2930521C54CB298341A0D /* TTNorms-Bold.otf in Resources */,
+				EFD7A353507A4FD0943414DB /* TTNorms-BoldItalic.otf in Resources */,
+				DC5700F568B64AAAACF8731F /* TTNorms-Italic.otf in Resources */,
+				2A19DCAED9DB44D6A4459E66 /* TTNorms-Light.otf in Resources */,
+				5CE90D61309E4F67BA371313 /* TTNorms-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
