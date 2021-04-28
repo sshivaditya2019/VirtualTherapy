@@ -27,8 +27,6 @@ export default StyleSheet.create({
         height:75,
         borderRadius:20,
         padding:25
-        
-
     },
     txt2 : {
         textAlign: 'center',
