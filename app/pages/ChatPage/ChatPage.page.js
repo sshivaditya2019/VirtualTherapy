@@ -4,17 +4,13 @@ import styles from './ChatPage.style.js'
 import ChatBlob from 'C:/Users/mgiri/OneDrive/Documents/GitHub/VirtualTherapy/app/components/ChatBlob/ChatBlob.component.js'
 
 class ChatPage extends Component {
-    constructor(props) {
-        super(props);
 
-    }
     render() {
         return (
             <View style={styles.container}>
-                <ChatBlob msg={this.state}/>
+                <ChatBlob msg={"ava"}/>
                 <View style={styles.outer}>      
-                    <TextInput style={styles.textInput} placeholder="Enter" 
-                    onChangeText={val => this.onChangeText('usrmsg',usrmsg)}/>
+                    <TextInput style={styles.textInput} placeholder="Enter" />
                     <View  style = {styles.imgbg}>
                         <TouchableOpacity onPress={()=>Keyboard.dismiss()}>
                             <Image source={require('./send.png')}></Image>
