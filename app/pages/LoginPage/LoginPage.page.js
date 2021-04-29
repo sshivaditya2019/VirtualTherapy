@@ -1,73 +1,41 @@
-import React from 'react'
-import { View, TextInput, StyleSheet, TouchableOpacity, Text, Button } from 'react-native'
+import React, {Component,useState, createContext} from 'react'
+import {View,Text,TextInput, TouchableOpacity,Button} from 'react-native'
+import styles from './LoginPage.style.js'
+import auth from '@react-native-firebase/auth';
 
-class Login extends React.Component {
-    state = {
-        email: '',
-        password: ''
+
+function LoginPage () {
+    const [email,setEmail] = useState('')
+    const [password,setPassword] = useState('')
+
+    const onChangeHandler = event => {
+        setInputValue(event.target.value);
+      };
+    const submitValue = () => {
+        const frmdetails = {
+            'email' : email,
+            'password' : password,
+        }
+        console.log(frmdetails);
+    }
+    function onPress() {
+        const UsrCred = auth().createUserWithEmailAndPassword(email,password)
     }
 
-    render() {
-        return (
-            <View style={styles.container}>
-                <TextInput
-                    style={styles.inputBox}
-                    value={this.state.email}
-                    onChangeText={email => this.setState({ email })}
-                    placeholder='Email'
-                    autoCapitalize='none'
-                />
-                <TextInput
-                    style={styles.inputBox}
-                    value={this.state.password}
-                    onChangeText={password => this.setState({ password })}
-                    placeholder='Password'
-                    secureTextEntry={true}
-                />
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Login</Text>
+    return (
+        <View style={styles.container}>
+                <TextInput style={styles.usrna} value={String(email)} placeholder="Email" onChangeText={(email) => setEmail(email)} ></TextInput>
+                <TextInput style={styles.pass} secureTextEntry value={String(password)} placeholder="Password" onChangeText={(password) => setPassword(password)}></TextInput>
+                <TouchableOpacity style={styles.button} onPress={() => onPress(email,password)}>
+                        <Text>Signup</Text>
                 </TouchableOpacity>
-                <Button title="Don't have an account yet? Sign up" />
-            </View>
-        )
-    }
+           
+               
+        </View>
+    )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    inputBox: {
-        width: '85%',
-        margin: 10,
-        padding: 15,
-        fontSize: 16,
-        borderColor: '#d3d3d3',
-        borderBottomWidth: 1,
-        textAlign: 'center'
-    },
-    button: {
-        marginTop: 30,
-        marginBottom: 20,
-        paddingVertical: 5,
-        alignItems: 'center',
-        backgroundColor: '#F6820D',
-        borderColor: '#F6820D',
-        borderWidth: 1,
-        borderRadius: 5,
-        width: 200
-    },
-    buttonText: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#fff'
-    },
-    buttonSignup: {
-        fontSize: 12
-    }
-})
 
-export default Login
+
+
+export default LoginPage;

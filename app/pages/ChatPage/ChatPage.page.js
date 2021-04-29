@@ -13,6 +13,9 @@ class ChatPage extends Component {
                 <View style={styles.footer}>         
                         <TextInput style={styles.txtinput} placeholder="Enter"/>
                 </View>
+                <View style={styles.nbsp}>
+
+                </View>
             </View>
         );
     }
