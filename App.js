@@ -1,12 +1,12 @@
 import React from 'react'
-import LoginPage from './app/pages/LoginPage/LoginPage.page.js';
+import ChatPage from './app/pages/ChatPage/ChatPage.page.js';
 import {View} from 'react-native'
 
 export default class App extends React.Component {
     render() {
         return (
             <View>
-                <LoginPage />
+                <ChatPage />
             </View>
 
         )

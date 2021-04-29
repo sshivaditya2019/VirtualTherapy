@@ -1,24 +1,23 @@
-import React, { Component} from 'react'
-import {View,Text,TextInput,KeyboardAvoidingView,Image,Button,TouchableWithoutFeedback, SafeAreaView,Keyboard, TouchableOpacity, Platform} from 'react-native'
+import React, { Component, useState } from 'react'
+import {View,TextInput,Image,Keyboard, TouchableOpacity,Text} from 'react-native'
 import styles from './ChatPage.style.js'
-
+import ChatBlob from '/Users/shivaditya/dev/react-native/VirtualTherapy/app/components/ChatBlob/ChatBlob.component.js'
 class ChatPage extends Component {
-    state = { msg: ''}
+
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.header}>
-
-                </View>
-                <View style={styles.footer}>         
-                        <TextInput style={styles.txtinput} placeholder="Enter"/>
-                </View>
-                <View style={styles.nbsp}>
-
+                <ChatBlob msg={"ava"}/>
+                <View style={styles.outer}>      
+                    <TextInput style={styles.textInput} placeholder="Enter" />
+                    <View  style = {styles.imgbg}>
+                        <TouchableOpacity onPress={()=>Keyboard.dismiss()}>
+                            <Image source={require('./send.png')}></Image>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
         );
     }
 }
-
 export default ChatPage;

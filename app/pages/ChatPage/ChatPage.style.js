@@ -2,31 +2,23 @@ import {StyleSheet} from 'react-native'
 
 export default StyleSheet.create ({
     container: {
-        flex:1,
-        flexDirection: 'column'
     },
-    header: {
-        flex:1,
-        backgroundColor:'green', 
-        padding:'80%'
+    outer: {
+        flexDirection: 'row', 
+        justifyContent: 'center',
+        width: 390,
+        position: 'absolute',
+        top: 700,
+        left: 10,
     },
-    footer: {
-        padding: '10%',
-        backgroundColor:'white'
-
+    textInput: {
+        paddingHorizontal: 15,
+        backgroundColor: '#f0f2f0',
+        height: 50,
+        width: 350,
+        borderRadius: 50,
     },
-    txtinput: {
-        top:-10,
-        paddingVertical: 15,
-        paddingHorizontal:10,
-        height:50,
-        borderRadius:5,
-        marginBottom:20,
-        backgroundColor:'#f2f2f2',
+    imgbg: {
+        padding: 10,
     },
-    nbsp: {
-        backgroundColor:'green', 
-        padding:'80%'
-    }
-    
 })
