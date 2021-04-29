@@ -1,5 +1,6 @@
 import React, {Component,useState, createContext} from 'react'
 import {View,Text,TextInput, TouchableOpacity,Button} from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './LoginPage.style.js'
 import auth from '@react-native-firebase/auth';
 
@@ -7,10 +8,6 @@ import auth from '@react-native-firebase/auth';
 function LoginPage () {
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
-
-    const onChangeHandler = event => {
-        setInputValue(event.target.value);
-      };
     const submitValue = () => {
         const frmdetails = {
             'email' : email,
@@ -19,15 +16,25 @@ function LoginPage () {
         console.log(frmdetails);
     }
     function onPress() {
-        const UsrCred = auth().createUserWithEmailAndPassword(email,password)
+        auth().createUserWithEmailAndPassword(email,password)
     }
 
     return (
         <View style={styles.container}>
-                <TextInput style={styles.usrna} value={String(email)} placeholder="Email" onChangeText={(email) => setEmail(email)} ></TextInput>
-                <TextInput style={styles.pass} secureTextEntry value={String(password)} placeholder="Password" onChangeText={(password) => setPassword(password)}></TextInput>
+                <TouchableOpacity>
+                <View style={styles.backbutton}>
+                    <Text style={styles.txtico}><Icon name="arrow-left" size={30} color="grey" /></Text>
+                </View>
+                </TouchableOpacity>
+                <Text style={styles.txtLogin}>Login</Text>
+                <View style={styles.boxx}>
+                    <Text style={styles.txtUSR}>Email Id</Text>
+                    <TextInput style={styles.usrna} value={String(email)} placeholder="Email" onChangeText={(email) => setEmail(email)} ></TextInput>
+                    <Text style={styles.txtPASS}>Password</Text>
+                    <TextInput style={styles.pass} secureTextEntry value={String(password)} placeholder="Password" onChangeText={(password) => setPassword(password)}></TextInput>
+                </View>
                 <TouchableOpacity style={styles.button} onPress={() => onPress(email,password)}>
-                        <Text>Signup</Text>
+                        <Text style={styles.ButTXT}>Signup</Text>
                 </TouchableOpacity>
            
                
