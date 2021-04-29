@@ -2,26 +2,24 @@ import {StyleSheet} from 'react-native'
 
 export default StyleSheet.create ({
     container: {
-        backgroundColor: 'rgb(255,0,0)',
-        marginBottom: 3,
+        flex:1,
     },
-    outer: {
+    header: {
+        flex:1,
+        backgroundColor:'green', 
+        padding:'80%'
     },
-    inner: {
-        marginBottom: 0,
-        padding: 10,
-        backgroundColor: '#e1e6dc',
-        borderRadius: 100,
-        width: 390,
-        left: 10,
+    footer: {
+        padding: '10%',
+        backgroundColor:'white'
     },
-    textInput: {
-        left: 10,
-        height: 50,
-        borderRadius: 100,
-        width: 330,
-    },
-    imgbg: {
-        
-    },
+    txtinput: {
+        paddingVertical: 0,
+        paddingHorizontal:10,
+        paddingBottom:10,
+        height:40,
+        borderRadius:5,
+        backgroundColor:'#f2f2f2',
+    }
+    
 })

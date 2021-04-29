@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import {View,Text,TextInput,KeyboardAvoidingView,Image,Button,TouchableWithoutFeedback, SafeAreaView,Keyboard, TouchableOpacity} from 'react-native'
+import {View,Text,TextInput,KeyboardAvoidingView,Image,Button,TouchableWithoutFeedback, SafeAreaView,Keyboard, TouchableOpacity, Platform} from 'react-native'
 import styles from './ChatPage.style.js'
 
 class ChatPage extends Component {
@@ -7,13 +7,11 @@ class ChatPage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.outer}>  
-                    <Text>aa</Text>
+                <View style={styles.header}>
+
                 </View>
-
-                <View style={styles.inner}>
-                    <TextInput placeholder="Enter Text Here" style={styles.textInput} />
-
+                <View style={styles.footer}>         
+                        <TextInput style={styles.txtinput} placeholder="Enter"/>
                 </View>
             </View>
         );
