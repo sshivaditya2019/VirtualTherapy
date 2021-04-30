@@ -1,0 +1,22 @@
+
+
+Cloud name:
+dtsvavxcq
+API key:
+575465847923753
+API secret:
+hzKggbq8aXg2x7ai45CJJqf3MEw
+Environment variable:
+cloudinary://575465847923753:hzKggbq8aXg2x7ai45CJJqf3MEw@dtsvavxcq
+
+Sample Upload:
+<input name="file" type="file"
+   class="file-upload" data-cloudinary-field="image_id"
+   data-form-data="{ 'transformation': {'crop':'limit','tags':'samples','width':3000,'height':2000}}"/>
+
+Sample Image:
+<CloudinaryContext cloudName="dtsvavxcq">
+    <Image publicId="sample" format="jpg">
+        <Transformation crop="fill" gravity="faces" width="300" height="200"/>
+    </Image>
+</CloudinaryContext>
