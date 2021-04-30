@@ -3,13 +3,13 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
     photocont : {
         paddingTop:30,
-        width: 350,
-        height:150,
+        width: 200,
+        height:120,
         flexDirection:'row'
     },
     profimg : {
-        width: 80,
-        height: 80,
+        width: 65,
+        height: 65,
         borderRadius: 10
     },
     dates : {
