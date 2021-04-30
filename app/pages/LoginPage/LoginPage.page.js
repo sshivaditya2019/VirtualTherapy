@@ -36,8 +36,6 @@ function LoginPage () {
                 <TouchableOpacity style={styles.button} onPress={() => onPress(email,password)}>
                         <Text style={styles.ButTXT}>Signup</Text>
                 </TouchableOpacity>
-           
-               
         </View>
     )
 }
