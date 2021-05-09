@@ -1,12 +1,12 @@
 import React from 'react'
-import HomePage from './app/pages/HomePage/HomePage.page.js';
+import LoginPage from './app/pages/LoginPage/LoginPage.page.js';
 import {View} from 'react-native'
 
 export default class App extends React.Component {
     render() {
         return (
             <View>
-                <HomePage />
+                <LoginPage />
             </View>
 
         )

@@ -39,7 +39,7 @@ const ChatPage = () => {
        
                     <View style={styles.tb}>
                     <TextInput style={styles.textInput} value={String(txt)} placeholder="Enter" onChangeText={(txt) => setTxt(txt)} ></TextInput>
-                    <TouchableOpacity style={styles.button} onPress={() => updateMap([txt,true])}>
+                    <TouchableOpacity style={styles.button} onPress={() => updateMap([txt,false])}>
                     <Image source={require('./send.png')}></Image>
                 </TouchableOpacity>
                     </View>
