@@ -5,7 +5,7 @@ import styles from './LoginPage.style.js'
 import auth from '@react-native-firebase/auth';
 
 
-function LoginPage () {
+function LoginPage ( {navigation} ) {
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
     const submitValue = () => {
@@ -17,6 +17,8 @@ function LoginPage () {
     }
     function onPress() {
         auth().createUserWithEmailAndPassword(email,password)
+        navigation.navigate('HomePage');
+
     }
 
     return (

@@ -2,6 +2,7 @@ import React, { Component} from 'react'
 import {View,Text,Image,TouchableOpacity} from 'react-native'
 import styles from './OnBoardingPage.style';
 
+
 class OnBoarding extends Component {
     render() {
         return (
@@ -13,13 +14,13 @@ class OnBoarding extends Component {
                 <Image style = {styles.imgbg} source={require('/Users/shivaditya/dev/react-native/VirtualTherapy/app/assets/Images/5270601.jpg')}></Image>
                 </View>
                 <View style={styles.bo2}>
-                    <TouchableOpacity style={styles.button1}>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate('LoginPage')}>
                             <Text style={styles.txt2}>
                                 Continue with Email
                             </Text>
                     </TouchableOpacity>
                     <View style = {{width:400,height:10}}></View>
-                    <TouchableOpacity style={styles.button2}>
+                    <TouchableOpacity style={styles.button2} onPress={() => this.props.navigation.navigate('PhoneAuthPage')} >
                             <Text style={styles.txt3}>
                                 Continue with phone number
                             </Text>
