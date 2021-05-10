@@ -8,7 +8,7 @@ import useGeoLocation from "react-ipgeolocation";
 function PhoneFlag(props) {
     return (
         <View>
-            <Text>{useGeoLocation().country}</Text>
+            <Text>{}</Text>
         </View>
     )
 }

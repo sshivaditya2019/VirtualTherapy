@@ -1,14 +1,17 @@
-import React from 'react'
-import LoginPage from './app/pages/LoginPage/LoginPage.page.js';
-import {View} from 'react-native'
+// In App.js in a new project
 
-export default class App extends React.Component {
-    render() {
-        return (
-            <View>
-                <LoginPage />
-            </View>
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import OnBoardingPage from './app/pages/OnBoardingPage/OnBoardingPage.page.js'
+import NavStack from './app/routes/NavStack.navigation.js'
 
-        )
-    }
+
+function App() {
+  return (
+    <NavStack />
+  );
 }
+
+export default App;

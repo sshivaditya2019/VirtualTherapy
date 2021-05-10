@@ -1,83 +1,50 @@
 import React from 'react'
 import { View, TextInput, StyleSheet, TouchableOpacity, Text } from 'react-native'
+import styles from './SignupPage.style.js';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import auth from '@react-native-firebase/auth';
 
 
-class Signup extends React.Component {
-    state = {
-        name: '',
-        email: '',
-        password: ''
+function SignUpPage(){
+    const [usrEmail,setEmail] = React.useState('');
+    const [usrPass,setPass] = React.useState('');
+    async function CreateUser(email,pass) {
+        try {
+            auth().createUserWithEmailAndPassword(email,pass);
+        }
+        catch (error) {
+            
+              console.error(error);
+        }
+        finally {
+            console.log('User created')
+        }
+
+    
     }
-
-    render() {
-        return (
-            <View style={styles.container}>
-                <TextInput
-                    style={styles.inputBox}
-                    value={this.state.name}
-                    onChangeText={name => this.setState({ name })}
-                    placeholder='Full Name'
-                />
-                <TextInput
-                    style={styles.inputBox}
-                    value={this.state.email}
-                    onChangeText={email => this.setState({ email })}
-                    placeholder='Email'
-                    autoCapitalize='none'
-                />
-                <TextInput
-                    style={styles.inputBox}
-                    value={this.state.password}
-                    onChangeText={password => this.setState({ password })}
-                    placeholder='Password'
-                    secureTextEntry={true}
-                />
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Signup</Text>
+    return(
+        <View style={styles.container}>
+            <TouchableOpacity>
+                <View style={styles.backbutton}>
+                    <Text style={styles.txtico}><Icon name="arrow-left" size={30} color="grey" /></Text>
+                </View>
                 </TouchableOpacity>
-            </View>
-        )
-    }
+            <Text style={{fontFamily:'TTNorms-Bold',fontSize:50}}>Sign Up</Text>
+            <Text style={{fontFamily:'TTNorms-Bold',fontSize:20}}>Email</Text>
+            <TextInput style={styles.email} value = {String(usrEmail)} onChangeText={(usrEmail) => setEmail(usrEmail)}></TextInput>
+            <Text style={{fontFamily:'TTNorms-Bold',fontSize:20}}>Name</Text>
+            <TextInput style={styles.name}></TextInput>
+            <Text style={{fontFamily:'TTNorms-Bold',fontSize:20}} >Password</Text>
+            <TextInput style={styles.pass} value = {String(usrPass)} onChangeText={(usrPass) => setPass(usrPass)}></TextInput>
+            <TouchableOpacity style={styles.subButton} onPress={() => {
+                        CreateUser(usrEmail,usrPass);
+                    }}>
+                <View style={styles.SubRegForm}>
+                    <Text style={{fontFamily:'TTNorms-Bold',fontSize:20,color:'white'}}>Sign Up</Text>
+                </View>
+                </TouchableOpacity>
+        </View>
+    )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    inputBox: {
-        width: '85%',
-        margin: 10,
-        padding: 15,
-        fontSize: 16,
-        borderColor: '#d3d3d3',
-        borderBottomWidth: 1,
-        textAlign: 'center'
-    },
-    button: {
-        marginTop: 30,
-        marginBottom: 20,
-        paddingVertical: 5,
-        alignItems: 'center',
-        backgroundColor: '#FFA611',
-        borderColor: '#FFA611',
-        borderWidth: 1,
-        borderRadius: 5,
-        width: 200
-    },
-    buttonText: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#fff'
-    },
-    buttonSignup: {
-        fontSize: 12
-    }
-})
-
-
-
-
-export default Signup
+export default SignUpPage;

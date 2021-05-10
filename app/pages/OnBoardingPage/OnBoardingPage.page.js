@@ -15,7 +15,7 @@ class OnBoarding extends Component {
                 <View style={styles.bo2}>
                     <TouchableOpacity style={styles.button1}>
                             <Text style={styles.txt2}>
-                                Login
+                                Continue with Email
                             </Text>
                     </TouchableOpacity>
                     <View style = {{width:400,height:10}}></View>
