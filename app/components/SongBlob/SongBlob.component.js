@@ -1,7 +1,7 @@
 import React, {Component,useState, createContext} from 'react'
 import {View,Text,TextInput, TouchableOpacity,Button, Image} from 'react-native'
 import {StyleSheet} from 'react-native'
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 function SongBlob(props) {
@@ -33,7 +33,8 @@ function SongBlob(props) {
                     
                         elevation: 5,
                     }}>
-                    <Image source={{uri: props.source}} style={{width:props.width,height:props.height,borderRadius:20}}></Image>
+                    <Image source={{uri: props.source}} style={{width:props.width,height:props.height,borderRadius:20, flex:0}}></Image>
+                  
                     </View>
             </View>
         </View>

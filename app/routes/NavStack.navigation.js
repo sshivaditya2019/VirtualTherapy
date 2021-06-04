@@ -9,13 +9,18 @@ import LoginPage from '../../app/pages/LoginPage/LoginPage.page.js'
 import PhoneAuthPage from '../../app/pages/PhoneAuthPage/PhoneAuthPage.page.js'
 import SignUpPage from '../../app/pages/SignUpPage/SignUpPage.page.js'
 import HomePage from '../../app/pages/HomePage/HomePage.page.js'
-
-
+import ChatPage from '../../app/pages/ChatPage/ChatPage.page.js'
+import { navigationRef, isReadyRef } from './RootNavigation.js';
 
 const Stack = createStackNavigator();
 function App() {
+  React.useEffect(() => {
+    return () => {
+      isReadyRef.current = false
+    };
+  }, []);
     return (
-      <NavigationContainer>
+      <NavigationContainer ref={navigationRef}>
         <Stack.Navigator screenOptions={{
     headerShown: false
   }}>
@@ -24,9 +29,11 @@ function App() {
           <Stack.Screen name="LoginPage" component={LoginPage} />
           <Stack.Screen name="PhoneAuthPage" component={PhoneAuthPage} />
           <Stack.Screen name="HomePage" component={HomePage} />
+          <Stack.Screen name="ChatPage" component={ChatPage} />
         </Stack.Navigator>
       </NavigationContainer>
     );
   }
 
 export default App;
+
